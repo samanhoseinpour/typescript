@@ -1,11 +1,13 @@
 import { faker } from '@faker-js/faker';
+import { Mappable } from './CustomMap';
 
-export class User {
+export class User implements Mappable {
   name: string;
   location: {
     lat: number;
     lng: number;
   };
+  color: string = 'black';
 
   constructor() {
     this.name = faker.person.fullName();
@@ -15,7 +17,7 @@ export class User {
     };
   }
 
-  marketContent(): string {
+  markerContent(): string {
     return `
       <div>
         <h1>${this.name}</h1>
