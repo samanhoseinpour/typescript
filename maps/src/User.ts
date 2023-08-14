@@ -14,4 +14,12 @@ export class User {
       lng: faker.location.longitude(),
     };
   }
+
+  marketContent(): string {
+    return `
+      <div>
+        <h1>${this.name}</h1>
+      </div>
+    `;
+  }
 }
