@@ -5,7 +5,7 @@ export class NumbersCollection {
     return this.collection.length;
   }
 
-  comapre(leftIndex: number, rightIndex: number): boolean {
+  compare(leftIndex: number, rightIndex: number): boolean {
     return this.collection[leftIndex] > this.collection[rightIndex];
   }
 
