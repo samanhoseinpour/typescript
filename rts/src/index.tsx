@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 
-import UserSearch from './state/UserSearch';
+import EventComponent from './EventComponent';
 
 const App = () => {
   return (
     <div>
-      <UserSearch />
+      <EventComponent />
     </div>
   );
 };
