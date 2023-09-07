@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 
-import Parent from './props/Parent';
+import GuestsList from './state/GuestsList';
 
 const App = () => {
   return (
     <div>
-      <Parent />
+      <GuestsList />
     </div>
   );
 };
