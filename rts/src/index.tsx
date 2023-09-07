@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 
-import GuestsList from './state/GuestsList';
+import UserSearch from './state/UserSearch';
 
 const App = () => {
   return (
     <div>
-      <GuestsList />
+      <UserSearch />
     </div>
   );
 };
