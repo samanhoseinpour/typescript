@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const db = [
+export const db = [
   { name: 'Sarah', age: 19 },
   { name: 'Maria', age: 20 },
   { name: 'Lisa', age: 22 },
