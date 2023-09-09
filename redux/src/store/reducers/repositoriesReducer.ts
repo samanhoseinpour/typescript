@@ -1,5 +1,5 @@
-import { Action } from '../actions';
-import { ActionType } from '../action-types';
+import { Action } from '../actions/repositoriesAction';
+import { ActionType } from '../action-types/repositoriesActionType';
 
 interface RepositoriesState {
   data: string[];
