@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export const db = [
   { name: 'Sarah', age: 19 },
@@ -10,8 +10,17 @@ export const db = [
 type dbSchema = { name: string; age: number } | undefined;
 
 const UserSearch: React.FC = () => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [name, setName] = useState('');
   const [user, setUser] = useState<dbSchema>();
+
+  useEffect(() => {
+    if (!inputRef.current) {
+      return;
+    }
+
+    inputRef.current.focus();
+  }, []);
 
   const handleClick = () => {
     const findUser = db.find((user) => {
@@ -34,6 +43,7 @@ const UserSearch: React.FC = () => {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        ref={inputRef}
       />
       <button onClick={handleClick}>Find</button>
 
